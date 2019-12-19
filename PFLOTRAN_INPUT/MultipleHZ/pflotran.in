@@ -1,0 +1,365 @@
+#Description: 1D Calcite dissolution problem
+
+#==============================================================================
+# DO NOT MODIFY
+skip
+SIMULATION
+  SIMULATION_TYPE SUBSURFACE
+  PROCESS_MODELS
+    SUBSURFACE_TRANSPORT transport
+      GLOBAL_IMPLICIT
+      NUMERICAL_JACOBIAN
+    /
+  /
+END
+# END DO NOT MODIFY
+#==============================================================================
+
+SUBSURFACE
+
+#=========================== constraints ======================================
+# modify these initial concentration
+
+#==============================================================================
+#==============================================================================
+# DO NOT MODIFY ANYTHING BELOW (unless you know what you are doing)
+#==============================================================================
+#==============================================================================
+
+#=========================== uniform flow =====================================
+UNIFORM_VELOCITY 0.d0 0.d0 0.d0 m/yr
+REFERENCE_DENSITY 1000.d0
+noskip
+
+#=========================== chemistry ========================================
+CHEMISTRY
+  PRIMARY_SPECIES
+    NH4+
+    O2(aq)
+    NO3-
+    NO2-
+    OrgN
+    Algae
+    OrgP
+    DOP
+    CBOD  
+    CH2O(aq)
+    CO2(aq)
+    N2(aq)
+  /
+  IMMOBILE_SPECIES
+    !C_consumption
+    st(1)_C5H7O2N
+    st(1)_CH2O
+    st(1)_CO2
+    st(1)_NH4+
+    st(1)_NO2-
+    st(1)_NO3-
+    st(1)_N2
+    st(1)_O2
+    st(2)_C5H7O2N
+    st(2)_CH2O
+    st(2)_CO2
+    st(2)_NH4+
+    st(2)_NO2-
+    st(2)_NO3-
+    st(2)_N2
+    st(2)_O2
+    st(3)_C5H7O2N
+    st(3)_CH2O
+    st(3)_CO2
+    st(3)_NH4+
+    st(3)_NO2-
+    st(3)_NO3-
+    st(3)_N2
+    st(3)_O2
+    st(4)_C5H7O2N
+    st(4)_CH2O
+    st(4)_CO2
+    st(4)_NH4+
+    st(4)_NO2-
+    st(4)_NO3-
+    st(4)_N2
+    st(4)_O2
+    st(5)_C5H7O2N
+    st(5)_CH2O
+    st(5)_CO2
+    st(5)_NH4+
+    st(5)_NO2-
+    st(5)_NO3-
+    st(5)_N2
+    st(5)_O2
+    st(6)_C5H7O2N
+    st(6)_CH2O
+    st(6)_CO2
+    st(6)_NH4+
+    st(6)_NO2-
+    st(6)_NO3-
+    st(6)_N2
+    st(6)_O2
+    st(7)_C5H7O2N
+    st(7)_CH2O
+    st(7)_CO2
+    st(7)_NH4+
+    st(7)_NO2-
+    st(7)_NO3-
+    st(7)_N2
+    st(7)_O2
+    st(8)_C5H7O2N
+    st(8)_CH2O
+    st(8)_CO2
+    st(8)_NH4+
+    st(8)_NO2-
+    st(8)_NO3-
+    st(8)_N2
+    st(8)_O2
+    st(9)_C5H7O2N
+    st(9)_CH2O
+    st(9)_CO2
+    st(9)_NH4+
+    st(9)_NO2-
+    st(9)_NO3-
+    st(9)_N2
+    st(9)_O2
+    st(10)_C5H7O2N
+    st(10)_CH2O
+    st(10)_CO2
+    st(10)_NH4+
+    st(10)_NO2-
+    st(10)_NO3-
+    st(10)_N2
+    st(10)_O2
+    st(11)_C5H7O2N
+    st(11)_CH2O
+    st(11)_CO2
+    st(11)_NH4+
+    st(11)_NO2-
+    st(11)_NO3-
+    st(11)_N2
+    st(11)_O2
+    st(12)_C5H7O2N
+    st(12)_CH2O
+    st(12)_CO2
+    st(12)_NH4+
+    st(12)_NO2-
+    st(12)_NO3-
+    st(12)_N2
+    st(12)_O2
+    st(13)_C5H7O2N
+    st(13)_CH2O
+    st(13)_CO2
+    st(13)_NH4+
+    st(13)_NO2-
+    st(13)_NO3-
+    st(13)_N2
+    st(13)_O2
+    st(14)_C5H7O2N
+    st(14)_CH2O
+    st(14)_CO2
+    st(14)_NH4+
+    st(14)_NO2-
+    st(14)_NO3-
+    st(14)_N2
+    st(14)_O2
+    st(15)_C5H7O2N
+    st(15)_CH2O
+    st(15)_CO2
+    st(15)_NH4+
+    st(15)_NO2-
+    st(15)_NO3-
+    st(15)_N2
+    st(15)_O2
+    st(16)_C5H7O2N
+    st(16)_CH2O
+    st(16)_CO2
+    st(16)_NH4+
+    st(16)_NO2-
+    st(16)_NO3-
+    st(16)_N2
+    st(16)_O2
+    st(17)_C5H7O2N
+    st(17)_CH2O
+    st(17)_CO2
+    st(17)_NH4+
+    st(17)_NO2-
+    st(17)_NO3-
+    st(17)_N2
+    st(17)_O2
+    st(18)_C5H7O2N
+    st(18)_CH2O
+    st(18)_CO2
+    st(18)_NH4+
+    st(18)_NO2-
+    st(18)_NO3-
+    st(18)_N2
+    st(18)_O2
+    st(19)_C5H7O2N
+    st(19)_CH2O
+    st(19)_CO2
+    st(19)_NH4+
+    st(19)_NO2-
+    st(19)_NO3-
+    st(19)_N2
+    st(19)_O2
+    st(20)_C5H7O2N
+    st(20)_CH2O
+    st(20)_CO2
+    st(20)_NH4+
+    st(20)_NO2-
+    st(20)_NO3-
+    st(20)_N2
+    st(20)_O2
+  /
+  REACTION_SANDBOX
+    CYBERNETIC-MULTIRATE
+      ACTIVATION_ENERGY 62.715 kJ/mol
+      F1    0.65d0
+      F2    0.99d0
+      F3    0.2167d0
+      K1    28.26e-0 1/d
+      Ka1   1.e-3 mM
+      Kd1   0.25 mM
+      K2    23.28e-0 1/d
+      Ka2   4d-3 mM
+      Kd2   0.25 mM
+      K3    84.78e-0 1/d
+      Ka3   1d-3 mM
+      Kd3   0.25 mM
+      Ki1   3.13d-2 mM
+      Ki2   3.13d-2 mM
+      Kdeg  0.242 1/d
+      vol_frac_r2st 1.
+      th_st 1 
+      th_frac 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0  \
+              1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 
+      alpha 1.e-3 1.e-3 1.e-3 1.e-3 1.e-3 1.e-3  1.e-3 1.e-3  1.e-3 1.e-3 \ 
+            1.e-3 1.e-3 1.e-3 1.e-3 1.e-3 1.e-3  1.e-3 1.e-3  1.e-3 1.e-3
+            unit_converter 20 1/s
+    /
+  /
+  DATABASE ../../mrmt.dat
+  LOG_FORMULATION
+  NUMERICAL_JACOBIAN
+  ACTIVITY_COEFFICIENTS OFF
+  OUTPUT
+    TOTAL
+    ALL
+    auxiliary
+  /
+END
+
+#=========================== solver options ===================================
+LINEAR_SOLVER TRANSPORT
+  SOLVER DIRECT
+END
+
+#=========================== discretization ===================================
+GRID
+  TYPE STRUCTURED
+  NXYZ 100 1 1
+  BOUNDS
+    0.d0 0.d0 0.d0
+    100.d0 1.d0 1.d0
+  /
+END
+
+#=========================== fluid properties =================================
+FLUID_PROPERTY
+  DIFFUSION_COEFFICIENT 1.d-9
+END
+
+#=========================== material properties ==============================
+MATERIAL_PROPERTY soil1
+  ID 1
+  POROSITY 0.25d0
+  TORTUOSITY 1.d0
+END
+
+#=========================== output options ===================================
+OUTPUT
+  TIMES y 6.25d0 12.5d0 18.75d0
+  PERIODIC_OBSERVATION TIMESTEP 1
+  FORMAT TECPLOT POINT
+END
+
+#=========================== times ============================================
+TIME
+  FINAL_TIME 1.d0 y
+  INITIAL_TIMESTEP_SIZE 0.1d0 h
+!  MAXIMUM_TIMESTEP_SIZE 2.5d-1 y
+  MAXIMUM_TIMESTEP_SIZE 1.d0 h
+END
+
+#=========================== regions ==========================================
+REGION all
+  COORDINATES
+    0.d0 0.d0 0.d0
+    100.d0 1.d0 1.d0
+  /
+END
+
+REGION west
+  FACE WEST
+  COORDINATES
+    0.d0 0.d0 0.d0
+    0.d0 1.d0 1.d0
+  /
+END
+
+REGION east
+  FACE EAST
+  COORDINATES
+    100.d0 0.d0 0.d0
+    100.d0 1.d0 1.d0
+  /
+END
+
+REGION middle
+  COORDINATE 50.d0 0.5d0 0.5d0
+END
+
+#=========================== observation points ===============================
+OBSERVATION
+  REGION middle
+END
+
+#=========================== transport conditions =============================
+TRANSPORT_CONDITION initial
+  TYPE dirichlet_zero_gradient
+  CONSTRAINT initial
+    CONCENTRATIONS
+      NO3-         1d-10 T  ##old
+##      H+         8.07d0  P  #remove
+     /
+     IMMOBILE
+       st(1)_NO3-    1.d-10
+    /
+  /
+END
+
+#
+#=========================== condition couplers ===============================
+# initial condition
+INITIAL_CONDITION
+  TRANSPORT_CONDITION initial
+  REGION all
+END
+skip
+BOUNDARY_CONDITION outlet
+  TRANSPORT_CONDITION initial
+  REGION east
+END
+
+BOUNDARY_CONDITION inlet
+  TRANSPORT_CONDITION inlet
+  REGION west
+END
+noskip
+#=========================== stratigraphy couplers ============================
+STRATA
+  REGION all
+  MATERIAL soil1
+END
+
+
+END_SUBSURFACE
